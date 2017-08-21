@@ -12,6 +12,11 @@
 		DD9350D31F4B148400B67EB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9350D11F4B148400B67EB3 /* Main.storyboard */; };
 		DD9350D51F4B148400B67EB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD9350D41F4B148400B67EB3 /* Assets.xcassets */; };
 		DD9350D81F4B148400B67EB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9350D61F4B148400B67EB3 /* LaunchScreen.storyboard */; };
+		DD9350E01F4B223C00B67EB3 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9350DF1F4B223C00B67EB3 /* CounterView.swift */; };
+		DD9350E21F4B249000B67EB3 /* KeyMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9350E11F4B249000B67EB3 /* KeyMemory.swift */; };
+		DD9350EA1F4B25E900B67EB3 /* MemeryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9350E81F4B25E900B67EB3 /* MemeryTableViewCell.swift */; };
+		DD9350EB1F4B25E900B67EB3 /* MemeryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD9350E91F4B25E900B67EB3 /* MemeryTableViewCell.xib */; };
+		DD9350ED1F4B440B00B67EB3 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9350EC1F4B440B00B67EB3 /* TimelineView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		DD9350D41F4B148400B67EB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD9350D71F4B148400B67EB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD9350D91F4B148400B67EB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD9350DF1F4B223C00B67EB3 /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		DD9350E11F4B249000B67EB3 /* KeyMemory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyMemory.swift; sourceTree = "<group>"; };
+		DD9350E81F4B25E900B67EB3 /* MemeryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeryTableViewCell.swift; sourceTree = "<group>"; };
+		DD9350E91F4B25E900B67EB3 /* MemeryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemeryTableViewCell.xib; sourceTree = "<group>"; };
+		DD9350EC1F4B440B00B67EB3 /* TimelineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,43 @@
 		DD9350CC1F4B148400B67EB3 /* Our Days */ = {
 			isa = PBXGroup;
 			children = (
+				DD9350E51F4B24E600B67EB3 /* Model */,
+				DD9350E41F4B24DC00B67EB3 /* Controller */,
+				DD9350E31F4B24D200B67EB3 /* View */,
 				DD9350CD1F4B148400B67EB3 /* AppDelegate.swift */,
-				DD9350CF1F4B148400B67EB3 /* ViewController.swift */,
 				DD9350D11F4B148400B67EB3 /* Main.storyboard */,
 				DD9350D41F4B148400B67EB3 /* Assets.xcassets */,
 				DD9350D61F4B148400B67EB3 /* LaunchScreen.storyboard */,
 				DD9350D91F4B148400B67EB3 /* Info.plist */,
 			);
 			path = "Our Days";
+			sourceTree = "<group>";
+		};
+		DD9350E31F4B24D200B67EB3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD9350DF1F4B223C00B67EB3 /* CounterView.swift */,
+				DD9350E81F4B25E900B67EB3 /* MemeryTableViewCell.swift */,
+				DD9350E91F4B25E900B67EB3 /* MemeryTableViewCell.xib */,
+				DD9350EC1F4B440B00B67EB3 /* TimelineView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		DD9350E41F4B24DC00B67EB3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD9350CF1F4B148400B67EB3 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		DD9350E51F4B24E600B67EB3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD9350E11F4B249000B67EB3 /* KeyMemory.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +165,7 @@
 			files = (
 				DD9350D81F4B148400B67EB3 /* LaunchScreen.storyboard in Resources */,
 				DD9350D51F4B148400B67EB3 /* Assets.xcassets in Resources */,
+				DD9350EB1F4B25E900B67EB3 /* MemeryTableViewCell.xib in Resources */,
 				DD9350D31F4B148400B67EB3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +177,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD9350E21F4B249000B67EB3 /* KeyMemory.swift in Sources */,
+				DD9350ED1F4B440B00B67EB3 /* TimelineView.swift in Sources */,
 				DD9350D01F4B148400B67EB3 /* ViewController.swift in Sources */,
+				DD9350EA1F4B25E900B67EB3 /* MemeryTableViewCell.swift in Sources */,
 				DD9350CE1F4B148400B67EB3 /* AppDelegate.swift in Sources */,
+				DD9350E01F4B223C00B67EB3 /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
