@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LTMorphingLabel
 
 class CounterView: UIView {
     
@@ -15,9 +16,11 @@ class CounterView: UIView {
     var blurEffectView = UIVisualEffectView.init()
     
     
-    var dayLabel = UILabel()
+    var dayLabel = LTMorphingLabel()
     
     var views = [UIView]()
+    
+    var button = UIButton()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,11 +32,32 @@ class CounterView: UIView {
         addSubview(backgroundImg)
         initBlurEffect()
         initDayLabel()
+        initButton()
+    }
+    
+    func initButton(){
+        button = UIButton(frame: CGRect(x: getScreenWidth() - 50, y: 40, width: 30, height: 30))
+        button.setImage(UIImage(named: "icon_add"), for: .normal)
+        button.alpha = 0.8
+        views.append(button)
+        addSubview(button)
+    }
+    
+    func addMemory(){
+     
+    }
+    
+    func setDay(day:Int){
+        dayLabel.text = String(day)
+        dayLabel.sizeToFit()
+        dayLabel.center = self.center
+        dayLabel.frame.origin.y -= 120
     }
     
     func initDayLabel(){
-        dayLabel = UILabel()
-        dayLabel.text = "3"
+        dayLabel = LTMorphingLabel()
+        dayLabel.morphingEffect = .evaporate
+        dayLabel.text = "0"
         dayLabel.font = UIFont.systemFont(ofSize: 100, weight: UIFontWeightLight)
         dayLabel.sizeToFit()
         dayLabel.center = self.center
@@ -83,7 +107,7 @@ class CounterView: UIView {
     }
     
     func changeBlurEffect(intensity:CGFloat){
-        print(intensity)
+
         if intensity > 0.8 {
             blurEffectView.alpha = 0.8
         }else{

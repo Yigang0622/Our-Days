@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD0EADFC1F4C4B8B00884A01 /* Pods_Our_Days.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F6865836AE25BA49619BD0 /* Pods_Our_Days.framework */; };
 		DD9350CE1F4B148400B67EB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9350CD1F4B148400B67EB3 /* AppDelegate.swift */; };
 		DD9350D01F4B148400B67EB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9350CF1F4B148400B67EB3 /* ViewController.swift */; };
 		DD9350D31F4B148400B67EB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9350D11F4B148400B67EB3 /* Main.storyboard */; };
@@ -17,9 +18,18 @@
 		DD9350EA1F4B25E900B67EB3 /* MemeryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9350E81F4B25E900B67EB3 /* MemeryTableViewCell.swift */; };
 		DD9350EB1F4B25E900B67EB3 /* MemeryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD9350E91F4B25E900B67EB3 /* MemeryTableViewCell.xib */; };
 		DD9350ED1F4B440B00B67EB3 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9350EC1F4B440B00B67EB3 /* TimelineView.swift */; };
+		DD9350F11F4BDFA100B67EB3 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9350F01F4BDFA100B67EB3 /* CloudKit.framework */; };
+		DD9350F41F4BE39800B67EB3 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9350F31F4BE39800B67EB3 /* DatabaseHelper.swift */; };
+		DD9350F61F4BEB6000B67EB3 /* AddMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9350F51F4BEB6000B67EB3 /* AddMemoryViewController.swift */; };
+		DD9350F81F4BF5EF00B67EB3 /* RelationshipManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9350F71F4BF5EF00B67EB3 /* RelationshipManager.swift */; };
+		DD9350FA1F4BFEDE00B67EB3 /* CloudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9350F91F4BFEDE00B67EB3 /* CloudManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D6B0D2606CB06E1BBF185A4 /* Pods-Our Days.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Our Days.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Our Days/Pods-Our Days.debug.xcconfig"; sourceTree = "<group>"; };
+		41F6865836AE25BA49619BD0 /* Pods_Our_Days.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Our_Days.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D8E6E35F713E339E6BE68D8 /* Pods-Our Days.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Our Days.release.xcconfig"; path = "Pods/Target Support Files/Pods-Our Days/Pods-Our Days.release.xcconfig"; sourceTree = "<group>"; };
+		8E5CDCAB26C16D0080A962DC /* Pods-Our Days.ad hoc distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Our Days.ad hoc distribution.xcconfig"; path = "Pods/Target Support Files/Pods-Our Days/Pods-Our Days.ad hoc distribution.xcconfig"; sourceTree = "<group>"; };
 		DD9350CA1F4B148400B67EB3 /* Our Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Our Days.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9350CD1F4B148400B67EB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD9350CF1F4B148400B67EB3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +42,12 @@
 		DD9350E81F4B25E900B67EB3 /* MemeryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeryTableViewCell.swift; sourceTree = "<group>"; };
 		DD9350E91F4B25E900B67EB3 /* MemeryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemeryTableViewCell.xib; sourceTree = "<group>"; };
 		DD9350EC1F4B440B00B67EB3 /* TimelineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
+		DD9350EE1F4BDF9700B67EB3 /* Our Days.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Our Days.entitlements"; sourceTree = "<group>"; };
+		DD9350F01F4BDFA100B67EB3 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		DD9350F31F4BE39800B67EB3 /* DatabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
+		DD9350F51F4BEB6000B67EB3 /* AddMemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMemoryViewController.swift; sourceTree = "<group>"; };
+		DD9350F71F4BF5EF00B67EB3 /* RelationshipManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationshipManager.swift; sourceTree = "<group>"; };
+		DD9350F91F4BFEDE00B67EB3 /* CloudManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +55,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD0EADFC1F4C4B8B00884A01 /* Pods_Our_Days.framework in Frameworks */,
+				DD9350F11F4BDFA100B67EB3 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D69A9870739922682A4A465 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1D6B0D2606CB06E1BBF185A4 /* Pods-Our Days.debug.xcconfig */,
+				6D8E6E35F713E339E6BE68D8 /* Pods-Our Days.release.xcconfig */,
+				8E5CDCAB26C16D0080A962DC /* Pods-Our Days.ad hoc distribution.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DD9350C11F4B148400B67EB3 = {
 			isa = PBXGroup;
 			children = (
 				DD9350CC1F4B148400B67EB3 /* Our Days */,
 				DD9350CB1F4B148400B67EB3 /* Products */,
+				DD9350EF1F4BDFA100B67EB3 /* Frameworks */,
+				3D69A9870739922682A4A465 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +94,8 @@
 		DD9350CC1F4B148400B67EB3 /* Our Days */ = {
 			isa = PBXGroup;
 			children = (
+				DD9350F21F4BE38000B67EB3 /* Core */,
+				DD9350EE1F4BDF9700B67EB3 /* Our Days.entitlements */,
 				DD9350E51F4B24E600B67EB3 /* Model */,
 				DD9350E41F4B24DC00B67EB3 /* Controller */,
 				DD9350E31F4B24D200B67EB3 /* View */,
@@ -91,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				DD9350CF1F4B148400B67EB3 /* ViewController.swift */,
+				DD9350F51F4BEB6000B67EB3 /* AddMemoryViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -103,6 +136,25 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		DD9350EF1F4BDFA100B67EB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD9350F01F4BDFA100B67EB3 /* CloudKit.framework */,
+				41F6865836AE25BA49619BD0 /* Pods_Our_Days.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD9350F21F4BE38000B67EB3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DD9350F31F4BE39800B67EB3 /* DatabaseHelper.swift */,
+				DD9350F71F4BF5EF00B67EB3 /* RelationshipManager.swift */,
+				DD9350F91F4BFEDE00B67EB3 /* CloudManager.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD9350DC1F4B148400B67EB3 /* Build configuration list for PBXNativeTarget "Our Days" */;
 			buildPhases = (
+				5E0283E21726F0036609CA0D /* [CP] Check Pods Manifest.lock */,
 				DD9350C61F4B148400B67EB3 /* Sources */,
 				DD9350C71F4B148400B67EB3 /* Frameworks */,
 				DD9350C81F4B148400B67EB3 /* Resources */,
+				DE18604D89B0E33865277EAF /* [CP] Embed Pods Frameworks */,
+				9791A10AEE2A85894E5C1DC3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,7 +191,15 @@
 					DD9350C91F4B148400B67EB3 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = H2YPMN4R7B;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -172,14 +235,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5E0283E21726F0036609CA0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9791A10AEE2A85894E5C1DC3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Our Days/Pods-Our Days-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE18604D89B0E33865277EAF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Our Days/Pods-Our Days-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DD9350C61F4B148400B67EB3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD9350F81F4BF5EF00B67EB3 /* RelationshipManager.swift in Sources */,
 				DD9350E21F4B249000B67EB3 /* KeyMemory.swift in Sources */,
+				DD9350F61F4BEB6000B67EB3 /* AddMemoryViewController.swift in Sources */,
 				DD9350ED1F4B440B00B67EB3 /* TimelineView.swift in Sources */,
 				DD9350D01F4B148400B67EB3 /* ViewController.swift in Sources */,
+				DD9350FA1F4BFEDE00B67EB3 /* CloudManager.swift in Sources */,
+				DD9350F41F4BE39800B67EB3 /* DatabaseHelper.swift in Sources */,
 				DD9350EA1F4B25E900B67EB3 /* MemeryTableViewCell.swift in Sources */,
 				DD9350CE1F4B148400B67EB3 /* AppDelegate.swift in Sources */,
 				DD9350E01F4B223C00B67EB3 /* CounterView.swift in Sources */,
@@ -208,6 +323,67 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DD0EADF31F4C496900884A01 /* ad hoc distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "ad hoc distribution";
+		};
+		DD0EADF41F4C496900884A01 /* ad hoc distribution */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E5CDCAB26C16D0080A962DC /* Pods-Our Days.ad hoc distribution.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Our Days/Our Days.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yigang Zhou (H2YPMN4R7B)";
+				DEVELOPMENT_TEAM = H2YPMN4R7B;
+				INFOPLIST_FILE = "Our Days/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "it.miketech.Our-Days";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b37dacb6-6c8e-4975-9136-9f083ce59859";
+				PROVISIONING_PROFILE_SPECIFIER = "AD_HOC AORDAYS";
+				SWIFT_VERSION = 3.0;
+			};
+			name = "ad hoc distribution";
+		};
 		DD9350DA1F4B148400B67EB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -303,26 +479,36 @@
 		};
 		DD9350DD1F4B148400B67EB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D6B0D2606CB06E1BBF185A4 /* Pods-Our Days.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Our Days/Our Days.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yigang Zhou (H2YPMN4R7B)";
 				DEVELOPMENT_TEAM = H2YPMN4R7B;
 				INFOPLIST_FILE = "Our Days/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "it.miketech.Our-Days";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b37dacb6-6c8e-4975-9136-9f083ce59859";
+				PROVISIONING_PROFILE_SPECIFIER = "AD_HOC AORDAYS";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		DD9350DE1F4B148400B67EB3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D8E6E35F713E339E6BE68D8 /* Pods-Our Days.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Our Days/Our Days.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yigang Zhou (H2YPMN4R7B)";
 				DEVELOPMENT_TEAM = H2YPMN4R7B;
 				INFOPLIST_FILE = "Our Days/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "it.miketech.Our-Days";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b37dacb6-6c8e-4975-9136-9f083ce59859";
+				PROVISIONING_PROFILE_SPECIFIER = "AD_HOC AORDAYS";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -335,6 +521,7 @@
 			buildConfigurations = (
 				DD9350DA1F4B148400B67EB3 /* Debug */,
 				DD9350DB1F4B148400B67EB3 /* Release */,
+				DD0EADF31F4C496900884A01 /* ad hoc distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -344,8 +531,10 @@
 			buildConfigurations = (
 				DD9350DD1F4B148400B67EB3 /* Debug */,
 				DD9350DE1F4B148400B67EB3 /* Release */,
+				DD0EADF41F4C496900884A01 /* ad hoc distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

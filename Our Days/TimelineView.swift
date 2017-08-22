@@ -18,13 +18,23 @@ class TimelineView: UIView,UITableViewDelegate,UITableViewDataSource {
     let leftPadding:CGFloat = 40
     let topPadding:CGFloat = 80
 
+    var ourRelactionship = RelationshipManager()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.frame.size.height = getScreenHeight()
         self.frame.size.width = getScreenWidth()
-        initTableView()
+        
+        reload()
         drawMyLabel()
+    }
+    
+    func reload(){
+        
+        tableView.removeFromSuperview()
+        ourRelactionship = RelationshipManager()
+        ourMemories = ourRelactionship.ourMemories
+        initTableView()
     }
     
     //初始化Table
@@ -35,6 +45,7 @@ class TimelineView: UIView,UITableViewDelegate,UITableViewDataSource {
         tableView = UITableView(frame: CGRect(x: leftPadding, y: topPadding, width: width, height: height))
         tableView.backgroundColor = UIColor.clear
         let nib = UINib(nibName: "MemeryTableViewCell", bundle: nil)
+ 
         tableView.register(nib, forCellReuseIdentifier: "cell")
         tableView.separatorInset = UIEdgeInsetsMake(0,0,0,0)
         tableView.dataSource = self
@@ -42,13 +53,29 @@ class TimelineView: UIView,UITableViewDelegate,UITableViewDataSource {
         tableView.bounces = false
         tableView.delegate = self
         tableView.tableFooterView = UIView()
-        for _ in 0...17{
-            ourMemories.append(KeyMemory())
-        }
+  
         
         addSubview(tableView)
         tableView.reloadData()
         
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        if editingStyle == .delete
+        {
+            let helper = DatabaseHelper()
+            helper.removeMemory(withUuid: ourMemories[indexPath.row].uuid)
+            CloudManager().updateMemories()
+            ourMemories.remove(at: indexPath.row)
+            tableView.reloadData()
+            
+        }
     }
     
     func drawMyLabel(){
@@ -75,7 +102,7 @@ class TimelineView: UIView,UITableViewDelegate,UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MemeryTableViewCell
         cell.layer.backgroundColor = UIColor.clear.cgColor
         cell.backgroundColor = UIColor.clear
-
+        cell.update(withMemory: ourMemories[indexPath.row])
         return cell
     }
     
