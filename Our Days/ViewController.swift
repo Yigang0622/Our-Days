@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 
 class ViewController: UIViewController,UIScrollViewDelegate {
@@ -32,6 +33,7 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.rootController = self
         
+
         
         initScrollVIew()
         
@@ -41,13 +43,50 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         counterView.button.addTarget(self, action: #selector(self.addMemory), for: .touchUpInside)
         scrollView.addSubview(counterView)
         
-        
+
         //回忆列表
         timelineView = TimelineView(frame: CGRect(x: 0, y: screenHeight, width: screenWidth, height: screenHeight))
  
         scrollView.addSubview(timelineView)
         
         CloudManager().sync()
+    }
+    
+    func calendarDayDidChange(){
+        
+        let hour = 0;
+        let minute = 0;
+        
+        // have to use NSCalendar for the components
+        let calendar = NSCalendar(identifier: .gregorian)!;
+        
+        var dateFire = Date()
+        
+        // if today's date is passed, use tomorrow
+        var fireComponents = calendar.components( [NSCalendar.Unit.day, NSCalendar.Unit.month, NSCalendar.Unit.year, NSCalendar.Unit.hour, NSCalendar.Unit.minute], from:dateFire)
+        
+        if (fireComponents.hour! > hour
+            || (fireComponents.hour == hour && fireComponents.minute! >= minute) ) {
+            
+            dateFire = dateFire.addingTimeInterval(86400)  // Use tomorrow's date
+            fireComponents = calendar.components( [NSCalendar.Unit.day, NSCalendar.Unit.month, NSCalendar.Unit.year, NSCalendar.Unit.hour, NSCalendar.Unit.minute], from:dateFire);
+        }
+        
+        // set up the time
+        fireComponents.hour = hour
+        fireComponents.minute = minute
+        
+        // schedule local notification
+        dateFire = calendar.date(from: fireComponents)!
+        
+        let localNotification = UILocalNotification()
+        localNotification.fireDate = dateFire
+        localNotification.alertBody = "Test"
+        localNotification.repeatInterval = NSCalendar.Unit.day
+        localNotification.soundName = UILocalNotificationDefaultSoundName;
+        
+        UIApplication.shared.scheduleLocalNotification(localNotification);
+ 
     }
     
     func update(){
@@ -92,6 +131,10 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         
         let blurIntensity =  verticalOffset / screenHeight
         counterView.changeBlurEffect(intensity: blurIntensity)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
 }

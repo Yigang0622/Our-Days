@@ -34,7 +34,7 @@ class CloudManager: NSObject {
             let isRemoved = memory.isRemoved
             let uuid = memory.uuid
         
-            let id = (UIDevice.current.identifierForVendor?.uuidString)! + "t" + String(Date().timeIntervalSince1970)
+            let id = (UIDevice.current.identifierForVendor?.uuidString)! + "t" + String(Int(Date().timeIntervalSince1970))
             let recordID = CKRecordID(recordName: id)
             let record = CKRecord(recordType: "OurMemory", recordID: recordID)
             
@@ -46,12 +46,17 @@ class CloudManager: NSObject {
             database.save(record) { (record, error) in
                 if (error != nil) {
                     print("creatRecord failure！\n",error?.localizedDescription)
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    
+                    let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default) { action in
+                    })
+                    appDelegate.rootController?.present(alert, animated: true)
  
                 } else {
                     print("creatRecord success！",record?.recordID)
                     self.helper.markMemoryAsUpload(withUUID: uuid, ckRecordID: (record?.recordID.recordName)!)
                     DispatchQueue.main.async() {
-                        //NotificationCenter.default.post(name: self.notificationName, object: nil)
                     }
                     
                 }

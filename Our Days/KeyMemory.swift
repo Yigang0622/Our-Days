@@ -25,13 +25,11 @@ class KeyMemory: NSObject {
     var isRemoved = 0
 
     func getDaysPassed() -> Int{
-
         let calendar = Calendar.current
         let date1 = calendar.startOfDay(for: Date(timeIntervalSince1970: time))
         let date2 = calendar.startOfDay(for: Date())
         let components = calendar.dateComponents([.day], from: date1, to: date2)
         return components.day!
-        
         
     }
     
