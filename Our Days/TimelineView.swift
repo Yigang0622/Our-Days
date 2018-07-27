@@ -81,7 +81,7 @@ class TimelineView: UIView,UITableViewDelegate,UITableViewDataSource {
     func drawMyLabel(){
         let label = UILabel(frame: CGRect(x: 0, y: getScreenHeight() - 60, width: getScreenWidth(), height: 50))
         label.textAlignment = .center
-        label.text = "Develped By Yigang with ❤️"
+        label.text = "Created By Yigang with ❤️"
         label.textColor = UIColor.white
         label.alpha = 0.8
         label.font = UIFont.systemFont(ofSize: 12)

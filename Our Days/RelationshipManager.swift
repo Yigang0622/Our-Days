@@ -11,7 +11,7 @@ import UIKit
 class RelationshipManager: NSObject {
     
     var daysSinceTogether = 0
-    var theDayThatWeAreTogether = Date()
+    var theDayThatWeAreTogether = TimeInterval()
     var ourMemories = [KeyMemory]()
     
     let helper = DatabaseHelper()
@@ -24,20 +24,23 @@ class RelationshipManager: NSObject {
     }
 
     
-    func parseDate(date:String) -> Date{
+    func parseDate(date:String) -> TimeInterval{
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Calendar.current.locale
         dateFormatter.dateFormat = "yyyy-MM-dd"
-        dateFormatter.locale = Locale(identifier: "zh_Hans_CN")
-        return dateFormatter.date(from: date)!
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 3600*8)
+        return dateFormatter.date(from: date)!.timeIntervalSince1970
     }
     
     func calculateDaysInterval()-> Int{
-        let calendar = Calendar.current
-        let date1 = calendar.startOfDay(for: theDayThatWeAreTogether)
-        let date2 = calendar.startOfDay(for: Date())
-        let components = calendar.dateComponents([.day], from: date1, to: date2)
-        return components.day!
+//        let calendar = Calendar.current
+//        let date1 = calendar.startOfDay(for: theDayThatWeAreTogether)
+//        let date2 = calendar.startOfDay(for: Date())
+//
+//        print(theDayThatWeAreTogether)
+//        let components = calendar.dateComponents([.day], from: date1, to: date2)
+//        return components.day!
+        return (Int)((Date().timeIntervalSince1970 - theDayThatWeAreTogether) / (3600*24))
     }
     
     

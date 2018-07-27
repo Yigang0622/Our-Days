@@ -27,13 +27,13 @@ class DatabaseHelper: NSObject {
     override init() {
         
         super.init()
-        
+
         
         let path = NSSearchPathForDirectoriesInDomains(
             .documentDirectory, .userDomainMask, true
             ).first!
         
-        
+   
         do {
             db = try Connection("\(path)/db.sqlite3")
         } catch {
@@ -58,8 +58,7 @@ class DatabaseHelper: NSObject {
         } catch {
             print(error)
         }
-        
-        
+
     }
     
     
@@ -77,6 +76,7 @@ class DatabaseHelper: NSObject {
         }catch{
             print(error)
         }
+        saveMemoryToUserDefault()
     }
     
     func markMemoryAsUpload(withUUID:String,ckRecordID:String){
@@ -109,28 +109,34 @@ class DatabaseHelper: NSObject {
         return arr
     }
     
+    func saveMemoryToUserDefault(){
+        let memory = realAllOurMemories()
+        let userDefault = UserDefaults.standard
+        
+        var titleArr = [String]()
+        var dateArr = [Int64]()
+        
+        for each in memory {
+            if each.isRemoved == 0 {
+                titleArr.append(each.remark)
+                dateArr.append(Int64(each.time))
+            }
+        }
+        
+        userDefault.set(titleArr, forKey: "memoryTitle")
+        userDefault.set(dateArr, forKey: "memoryDate")
+        
+    }
     
-//    func readNeedUpdateMemory() -> [KeyMemory]{
-//        var arr = Array<KeyMemory>()
-//        
-//        do{
-//            let temp = ourMemory.filter(needUpdate == 1).order(timeStamp.asc)
-//            for memory in try db.prepare(temp) {
-//                
-//                let bean = KeyMemory()
-//                bean.uuid = memory[uuid]
-//                bean.time = TimeInterval(memory[timeStamp])
-//                bean.remark = memory[remark]
-//                bean.isRemoved = Int(memory[isRemoved])
-//                arr.append(bean)
-//            }
-//        }catch{
-//            print(error.localizedDescription)
-//        }
-//        return arr
-//
-//    }
+    func readMemoryFromUserDefault(){
+        let userDefault = UserDefaults.standard
+        let arr = userDefault.array(forKey: "memoryTitle")
+        
+        print(arr?.count as Any,"awfaef")
+        
+    }
     
+ 
     func removeMemory(withUuid:String){
         
         let memory = ourMemory.filter(uuid == withUuid)
@@ -148,7 +154,7 @@ class DatabaseHelper: NSObject {
         }catch{
             print(error)
         }
-
+        saveMemoryToUserDefault()
     }
     
     func readIDforRemove() -> [String]{

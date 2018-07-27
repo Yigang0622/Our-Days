@@ -33,7 +33,6 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.rootController = self
         
-
         
         initScrollVIew()
         
@@ -48,6 +47,8 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         timelineView = TimelineView(frame: CGRect(x: 0, y: screenHeight, width: screenWidth, height: screenHeight))
  
         scrollView.addSubview(timelineView)
+        
+        DatabaseHelper().saveMemoryToUserDefault()
         
         CloudManager().sync()
     }

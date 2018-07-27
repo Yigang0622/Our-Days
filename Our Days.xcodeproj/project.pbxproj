@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81A89FBEC3CA800B5AEA3A96 /* Pods_Ouy_Days_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A792EABF2A0C62348331D9F /* Pods_Ouy_Days_Extension.framework */; };
 		DD0EADFC1F4C4B8B00884A01 /* Pods_Our_Days.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F6865836AE25BA49619BD0 /* Pods_Our_Days.framework */; };
 		DD1170431F5F7EF4003BEDCB /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1170421F5F7EF4003BEDCB /* NotificationCenter.framework */; };
 		DD1170461F5F7EF4003BEDCB /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1170451F5F7EF4003BEDCB /* TodayViewController.swift */; };
 		DD1170491F5F7EF4003BEDCB /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1170471F5F7EF4003BEDCB /* MainInterface.storyboard */; };
 		DD11704D1F5F7EF4003BEDCB /* Ouy Days Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DD1170411F5F7EF4003BEDCB /* Ouy Days Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DD1170571F60DAA1003BEDCB /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9350F31F4BE39800B67EB3 /* DatabaseHelper.swift */; };
+		DD1170581F60DAA3003BEDCB /* RelationshipManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9350F71F4BF5EF00B67EB3 /* RelationshipManager.swift */; };
+		DD1170591F60DAC5003BEDCB /* KeyMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9350E11F4B249000B67EB3 /* KeyMemory.swift */; };
 		DD9350CE1F4B148400B67EB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9350CD1F4B148400B67EB3 /* AppDelegate.swift */; };
 		DD9350D01F4B148400B67EB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9350CF1F4B148400B67EB3 /* ViewController.swift */; };
 		DD9350D31F4B148400B67EB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9350D11F4B148400B67EB3 /* Main.storyboard */; };
@@ -27,6 +31,8 @@
 		DD9350F61F4BEB6000B67EB3 /* AddMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9350F51F4BEB6000B67EB3 /* AddMemoryViewController.swift */; };
 		DD9350F81F4BF5EF00B67EB3 /* RelationshipManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9350F71F4BF5EF00B67EB3 /* RelationshipManager.swift */; };
 		DD9350FA1F4BFEDE00B67EB3 /* CloudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9350F91F4BFEDE00B67EB3 /* CloudManager.swift */; };
+		DDC013631F6962F9003CDEB1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC013611F6962F9003CDEB1 /* TableViewCell.swift */; };
+		DDC013641F6962F9003CDEB1 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDC013621F6962F9003CDEB1 /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +60,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		12DD20FD9B01F1ED3635761F /* Pods-Ouy Days Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ouy Days Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ouy Days Extension/Pods-Ouy Days Extension.release.xcconfig"; sourceTree = "<group>"; };
 		1D6B0D2606CB06E1BBF185A4 /* Pods-Our Days.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Our Days.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Our Days/Pods-Our Days.debug.xcconfig"; sourceTree = "<group>"; };
+		3A792EABF2A0C62348331D9F /* Pods_Ouy_Days_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ouy_Days_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41F6865836AE25BA49619BD0 /* Pods_Our_Days.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Our_Days.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AFEE92A503F0C12F73DD8BA /* Pods-Ouy Days Extension.ad hoc distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ouy Days Extension.ad hoc distribution.xcconfig"; path = "Pods/Target Support Files/Pods-Ouy Days Extension/Pods-Ouy Days Extension.ad hoc distribution.xcconfig"; sourceTree = "<group>"; };
 		6D8E6E35F713E339E6BE68D8 /* Pods-Our Days.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Our Days.release.xcconfig"; path = "Pods/Target Support Files/Pods-Our Days/Pods-Our Days.release.xcconfig"; sourceTree = "<group>"; };
 		8E5CDCAB26C16D0080A962DC /* Pods-Our Days.ad hoc distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Our Days.ad hoc distribution.xcconfig"; path = "Pods/Target Support Files/Pods-Our Days/Pods-Our Days.ad hoc distribution.xcconfig"; sourceTree = "<group>"; };
 		DD1170411F5F7EF4003BEDCB /* Ouy Days Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Ouy Days Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +90,9 @@
 		DD9350F51F4BEB6000B67EB3 /* AddMemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMemoryViewController.swift; sourceTree = "<group>"; };
 		DD9350F71F4BF5EF00B67EB3 /* RelationshipManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationshipManager.swift; sourceTree = "<group>"; };
 		DD9350F91F4BFEDE00B67EB3 /* CloudManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudManager.swift; sourceTree = "<group>"; };
+		DDC013611F6962F9003CDEB1 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		DDC013621F6962F9003CDEB1 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		F29401F1344D8E4262EB121C /* Pods-Ouy Days Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ouy Days Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ouy Days Extension/Pods-Ouy Days Extension.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +101,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD1170431F5F7EF4003BEDCB /* NotificationCenter.framework in Frameworks */,
+				81A89FBEC3CA800B5AEA3A96 /* Pods_Ouy_Days_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +123,9 @@
 				1D6B0D2606CB06E1BBF185A4 /* Pods-Our Days.debug.xcconfig */,
 				6D8E6E35F713E339E6BE68D8 /* Pods-Our Days.release.xcconfig */,
 				8E5CDCAB26C16D0080A962DC /* Pods-Our Days.ad hoc distribution.xcconfig */,
+				F29401F1344D8E4262EB121C /* Pods-Ouy Days Extension.debug.xcconfig */,
+				12DD20FD9B01F1ED3635761F /* Pods-Ouy Days Extension.release.xcconfig */,
+				5AFEE92A503F0C12F73DD8BA /* Pods-Ouy Days Extension.ad hoc distribution.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -118,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				DD1170451F5F7EF4003BEDCB /* TodayViewController.swift */,
+				DDC013611F6962F9003CDEB1 /* TableViewCell.swift */,
+				DDC013621F6962F9003CDEB1 /* TableViewCell.xib */,
 				DD1170471F5F7EF4003BEDCB /* MainInterface.storyboard */,
 				DD11704A1F5F7EF4003BEDCB /* Info.plist */,
 			);
@@ -195,6 +213,7 @@
 				DD9350F01F4BDFA100B67EB3 /* CloudKit.framework */,
 				41F6865836AE25BA49619BD0 /* Pods_Our_Days.framework */,
 				DD1170421F5F7EF4003BEDCB /* NotificationCenter.framework */,
+				3A792EABF2A0C62348331D9F /* Pods_Ouy_Days_Extension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -216,9 +235,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD1170511F5F7EF4003BEDCB /* Build configuration list for PBXNativeTarget "Ouy Days Extension" */;
 			buildPhases = (
+				FF7F90A79B5270F6FCB2B058 /* [CP] Check Pods Manifest.lock */,
 				DD11703D1F5F7EF4003BEDCB /* Sources */,
 				DD11703E1F5F7EF4003BEDCB /* Frameworks */,
 				DD11703F1F5F7EF4003BEDCB /* Resources */,
+				E2E76921A18CF37BF24EC724 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -306,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD1170491F5F7EF4003BEDCB /* MainInterface.storyboard in Resources */,
+				DDC013641F6962F9003CDEB1 /* TableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +390,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Our Days/Pods-Our Days-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E2E76921A18CF37BF24EC724 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ouy Days Extension/Pods-Ouy Days Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF7F90A79B5270F6FCB2B058 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -375,6 +427,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDC013631F6962F9003CDEB1 /* TableViewCell.swift in Sources */,
+				DD1170591F60DAC5003BEDCB /* KeyMemory.swift in Sources */,
+				DD1170581F60DAA3003BEDCB /* RelationshipManager.swift in Sources */,
+				DD1170571F60DAA1003BEDCB /* DatabaseHelper.swift in Sources */,
 				DD1170461F5F7EF4003BEDCB /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,14 +548,15 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "it.miketech.Our-Days";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "068ebf66-9065-49e4-b1c3-7fc543b01629";
-				PROVISIONING_PROFILE_SPECIFIER = "XC iOS Ad Hoc: it.miketech.Our-Days";
+				PROVISIONING_PROFILE = "b37dacb6-6c8e-4975-9136-9f083ce59859";
+				PROVISIONING_PROFILE_SPECIFIER = "AD_HOC AORDAYS";
 				SWIFT_VERSION = 3.0;
 			};
 			name = "ad hoc distribution";
 		};
 		DD11704E1F5F7EF4003BEDCB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F29401F1344D8E4262EB121C /* Pods-Ouy Days Extension.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Yigang Zhou (H2YPMN4R7B)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yigang Zhou (H2YPMN4R7B)";
@@ -517,6 +574,7 @@
 		};
 		DD11704F1F5F7EF4003BEDCB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12DD20FD9B01F1ED3635761F /* Pods-Ouy Days Extension.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Yigang Zhou (H2YPMN4R7B)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yigang Zhou (H2YPMN4R7B)";
@@ -534,6 +592,7 @@
 		};
 		DD1170501F5F7EF4003BEDCB /* ad hoc distribution */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AFEE92A503F0C12F73DD8BA /* Pods-Ouy Days Extension.ad hoc distribution.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Yigang Zhou (H2YPMN4R7B)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yigang Zhou (H2YPMN4R7B)";
@@ -659,8 +718,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "it.miketech.Our-Days";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "068ebf66-9065-49e4-b1c3-7fc543b01629";
-				PROVISIONING_PROFILE_SPECIFIER = "XC iOS Ad Hoc: it.miketech.Our-Days";
+				PROVISIONING_PROFILE = "b37dacb6-6c8e-4975-9136-9f083ce59859";
+				PROVISIONING_PROFILE_SPECIFIER = "AD_HOC AORDAYS";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -678,8 +737,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "it.miketech.Our-Days";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "068ebf66-9065-49e4-b1c3-7fc543b01629";
-				PROVISIONING_PROFILE_SPECIFIER = "XC iOS Ad Hoc: it.miketech.Our-Days";
+				PROVISIONING_PROFILE = "b37dacb6-6c8e-4975-9136-9f083ce59859";
+				PROVISIONING_PROFILE_SPECIFIER = "AD_HOC AORDAYS";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
