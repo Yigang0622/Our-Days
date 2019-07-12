@@ -16,7 +16,7 @@ class TimelineView: UIView,UITableViewDelegate,UITableViewDataSource {
     var ourMemories = [KeyMemory]()
     
     var leftPadding:CGFloat = 40
-    var topPadding:CGFloat = 80
+    var topPadding:CGFloat = 130
 
     var ourRelactionship = RelationshipManager()
     
@@ -40,14 +40,14 @@ class TimelineView: UIView,UITableViewDelegate,UITableViewDataSource {
     //初始化Table
     fileprivate func initTableView(){
         let width = getScreenWidth() - 2*leftPadding
-        var height = CGFloat(9 * 55)
+        var height = CGFloat(10 * 55)
         
-        if UIDevice().userInterfaceIdiom == .phone {
-            if UIScreen.main.nativeBounds.height == 1792{
-                height = CGFloat(12 * 55)
-                topPadding = 130
-            }
-        }
+//        if UIDevice().userInterfaceIdiom == .phone {
+//            if UIScreen.main.nativeBounds.height == 1792{
+//                height = CGFloat(12 * 55)
+//                topPadding = 130
+//            }
+//        }
         
         tableView = UITableView(frame: CGRect(x: leftPadding, y: topPadding, width: width, height: height))
         tableView.backgroundColor = UIColor.clear
@@ -63,6 +63,7 @@ class TimelineView: UIView,UITableViewDelegate,UITableViewDataSource {
   
         
         addSubview(tableView)
+//        tableView.center = self.center
         tableView.reloadData()
         
     }

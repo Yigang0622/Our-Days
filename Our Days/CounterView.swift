@@ -36,16 +36,16 @@ class CounterView: UIView {
     }
     
     func initButton(){
-        button = UIButton(frame: CGRect(x: getScreenWidth() - 50, y: 40, width: 30, height: 30))
+        button = UIButton(frame: CGRect(x: getScreenWidth() - 50, y: 70, width: 30, height: 30))
         
-        if UIDevice().userInterfaceIdiom == .phone {
-            if UIScreen.main.nativeBounds.height == 1792{
-                button.frame.origin.y += 30
-            }
-        }
+//        if UIDevice().userInterfaceIdiom == .phone {
+//            if UIScreen.main.nativeBounds.height == 1792{
+//                button.frame.origin.y += 30
+//            }
+//        }
         
         button.setImage(UIImage(named: "icon_add"), for: .normal)
-        button.alpha = 0.8
+        button.alpha = 0.5
         views.append(button)
         addSubview(button)
     }
