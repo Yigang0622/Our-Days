@@ -99,18 +99,18 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         timelineView.reload()
     }
     
-    func onSynced(){
+    @objc func onSynced(){
         timelineView.reload()
         
     }
 
-    func addMemory(){
+    @objc func addMemory(){
         let controller = AddMemoryViewController()
-        self.addChildViewController(controller)
+        self.addChild(controller)
         controller.view.frame = self.view.frame
         self.view.addSubview(controller.view)
-        self.view.bringSubview(toFront: controller.view)
-        controller.didMove(toParentViewController:  self)
+        self.view.bringSubviewToFront(controller.view)
+        controller.didMove(toParent:  self)
         
     }
     

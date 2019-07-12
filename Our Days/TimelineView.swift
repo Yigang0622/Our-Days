@@ -15,8 +15,8 @@ class TimelineView: UIView,UITableViewDelegate,UITableViewDataSource {
     //我们的回忆
     var ourMemories = [KeyMemory]()
     
-    let leftPadding:CGFloat = 40
-    let topPadding:CGFloat = 80
+    var leftPadding:CGFloat = 40
+    var topPadding:CGFloat = 80
 
     var ourRelactionship = RelationshipManager()
     
@@ -40,14 +40,21 @@ class TimelineView: UIView,UITableViewDelegate,UITableViewDataSource {
     //初始化Table
     fileprivate func initTableView(){
         let width = getScreenWidth() - 2*leftPadding
-        let height = CGFloat(9 * 55)
+        var height = CGFloat(9 * 55)
+        
+        if UIDevice().userInterfaceIdiom == .phone {
+            if UIScreen.main.nativeBounds.height == 1792{
+                height = CGFloat(12 * 55)
+                topPadding = 130
+            }
+        }
         
         tableView = UITableView(frame: CGRect(x: leftPadding, y: topPadding, width: width, height: height))
         tableView.backgroundColor = UIColor.clear
         let nib = UINib(nibName: "MemeryTableViewCell", bundle: nil)
  
         tableView.register(nib, forCellReuseIdentifier: "cell")
-        tableView.separatorInset = UIEdgeInsetsMake(0,0,0,0)
+        tableView.separatorInset = UIEdgeInsets(top: 0,left: 0,bottom: 0,right: 0)
         tableView.dataSource = self
         tableView.showsVerticalScrollIndicator = false
         tableView.bounces = false
@@ -65,7 +72,7 @@ class TimelineView: UIView,UITableViewDelegate,UITableViewDataSource {
         return true
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)
     {
         if editingStyle == .delete
         {

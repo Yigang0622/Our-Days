@@ -12,7 +12,7 @@ import LTMorphingLabel
 class CounterView: UIView {
     
     var backgroundImg = UIImageView()
-    let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+    let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
     var blurEffectView = UIVisualEffectView.init()
     
     
@@ -37,6 +37,13 @@ class CounterView: UIView {
     
     func initButton(){
         button = UIButton(frame: CGRect(x: getScreenWidth() - 50, y: 40, width: 30, height: 30))
+        
+        if UIDevice().userInterfaceIdiom == .phone {
+            if UIScreen.main.nativeBounds.height == 1792{
+                button.frame.origin.y += 30
+            }
+        }
+        
         button.setImage(UIImage(named: "icon_add"), for: .normal)
         button.alpha = 0.8
         views.append(button)
@@ -58,7 +65,7 @@ class CounterView: UIView {
         dayLabel = LTMorphingLabel()
         dayLabel.morphingEffect = .evaporate
         dayLabel.text = "0"
-        dayLabel.font = UIFont.systemFont(ofSize: 100, weight: UIFontWeightLight)
+        dayLabel.font = UIFont.systemFont(ofSize: 100, weight: UIFont.Weight.light)
         dayLabel.sizeToFit()
         dayLabel.center = self.center
         dayLabel.textColor = UIColor.white
@@ -75,7 +82,7 @@ class CounterView: UIView {
         
         let subLabel = UILabel()
         subLabel.text = "days since we are together"
-        subLabel.font = UIFont.systemFont(ofSize: 18, weight: UIFontWeightThin)
+        subLabel.font = UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.thin)
         subLabel.numberOfLines = 0
         subLabel.sizeToFit()
         subLabel.center = self.center

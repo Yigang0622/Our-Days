@@ -13,7 +13,7 @@ class AddMemoryViewController: UIViewController,UITextFieldDelegate {
     let screenHeight = UIScreen.main.bounds.height
     let screenWidth = UIScreen.main.bounds.width
     
-    let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.regular)
+    let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
     var blurEffectView = UIVisualEffectView.init()
     
     var datePicker = UIDatePicker()
@@ -60,7 +60,7 @@ class AddMemoryViewController: UIViewController,UITextFieldDelegate {
         let label = UILabel(frame: CGRect(x: 0, y: 100, width: screenWidth, height: 50))
         label.text = "Add Memory"
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 40, weight: UIFontWeightLight)
+        label.font = UIFont.systemFont(ofSize: 40, weight: UIFont.Weight.light)
         label.textColor = UIColor.white
         self.view.addSubview(label)
     }
@@ -102,7 +102,7 @@ class AddMemoryViewController: UIViewController,UITextFieldDelegate {
         self.view.addSubview(button)
     }
     
-    func okButtonTap(){
+    @objc func okButtonTap(){
         let text = textField.text
         if text != "" {
             let remark = text

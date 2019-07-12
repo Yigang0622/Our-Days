@@ -33,7 +33,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 //
 //
         self.view.addSubview(dayPercentView)
-        self.view.sendSubview(toBack: dayPercentView)
+        self.view.sendSubviewToBack(dayPercentView)
         
 //        dayPercentView.frame.size.width = CGFloat(getDayTimePercentage()) * self.view.frame.size.width
 
@@ -126,7 +126,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 //        return 45
 //    }
 //
-    func launchApp() {
+    @objc func launchApp() {
         let url: URL? = URL(string: "launch:")!
         
         if let appurl = url {

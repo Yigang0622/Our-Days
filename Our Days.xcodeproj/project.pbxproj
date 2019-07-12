@@ -239,7 +239,6 @@
 				DD11703D1F5F7EF4003BEDCB /* Sources */,
 				DD11703E1F5F7EF4003BEDCB /* Frameworks */,
 				DD11703F1F5F7EF4003BEDCB /* Resources */,
-				E2E76921A18CF37BF24EC724 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -259,7 +258,6 @@
 				DD9350C71F4B148400B67EB3 /* Frameworks */,
 				DD9350C81F4B148400B67EB3 /* Resources */,
 				DE18604D89B0E33865277EAF /* [CP] Embed Pods Frameworks */,
-				9791A10AEE2A85894E5C1DC3 /* [CP] Copy Pods Resources */,
 				DD1170521F5F7EF4003BEDCB /* Embed App Extensions */,
 			);
 			buildRules = (
@@ -307,6 +305,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -351,28 +350,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Our Days-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		9791A10AEE2A85894E5C1DC3 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Our Days/Pods-Our Days-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DE18604D89B0E33865277EAF /* [CP] Embed Pods Frameworks */ = {
@@ -381,28 +368,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Our Days/Pods-Our Days-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LTMorphingLabel/LTMorphingLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTMorphingLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Our Days/Pods-Our Days-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E2E76921A18CF37BF24EC724 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ouy Days Extension/Pods-Ouy Days Extension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FF7F90A79B5270F6FCB2B058 /* [CP] Check Pods Manifest.lock */ = {
@@ -411,13 +388,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ouy Days Extension-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -531,6 +511,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = "ad hoc distribution";
@@ -548,9 +529,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "it.miketech.Our-Days";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b37dacb6-6c8e-4975-9136-9f083ce59859";
-				PROVISIONING_PROFILE_SPECIFIER = "AD_HOC AORDAYS";
-				SWIFT_VERSION = 3.0;
+				PROVISIONING_PROFILE = "69b1807e-e3ed-4d1c-9898-87dcae2ab4f8";
+				PROVISIONING_PROFILE_SPECIFIER = "AD_HOC OURDAYS";
+				SWIFT_VERSION = 5.0;
 			};
 			name = "ad hoc distribution";
 		};
@@ -568,7 +549,7 @@
 				PROVISIONING_PROFILE = "8b8ce7cf-d8b5-4340-87e1-8af4bfd9db94";
 				PROVISIONING_PROFILE_SPECIFIER = ADHOC_XC;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -586,7 +567,7 @@
 				PROVISIONING_PROFILE = "8b8ce7cf-d8b5-4340-87e1-8af4bfd9db94";
 				PROVISIONING_PROFILE_SPECIFIER = ADHOC_XC;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -604,7 +585,7 @@
 				PROVISIONING_PROFILE = "8b8ce7cf-d8b5-4340-87e1-8af4bfd9db94";
 				PROVISIONING_PROFILE_SPECIFIER = ADHOC_XC;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = "ad hoc distribution";
 		};
@@ -657,6 +638,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -701,6 +683,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -718,9 +701,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "it.miketech.Our-Days";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b37dacb6-6c8e-4975-9136-9f083ce59859";
-				PROVISIONING_PROFILE_SPECIFIER = "AD_HOC AORDAYS";
-				SWIFT_VERSION = 3.0;
+				PROVISIONING_PROFILE = "69b1807e-e3ed-4d1c-9898-87dcae2ab4f8";
+				PROVISIONING_PROFILE_SPECIFIER = "AD_HOC OURDAYS";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -737,9 +720,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "it.miketech.Our-Days";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b37dacb6-6c8e-4975-9136-9f083ce59859";
-				PROVISIONING_PROFILE_SPECIFIER = "AD_HOC AORDAYS";
-				SWIFT_VERSION = 3.0;
+				PROVISIONING_PROFILE = "69b1807e-e3ed-4d1c-9898-87dcae2ab4f8";
+				PROVISIONING_PROFILE_SPECIFIER = "AD_HOC OURDAYS";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

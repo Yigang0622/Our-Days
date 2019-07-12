@@ -35,7 +35,7 @@ class CloudManager: NSObject {
             let uuid = memory.uuid
         
             let id = (UIDevice.current.identifierForVendor?.uuidString)! + "t" + String(Int(Date().timeIntervalSince1970))
-            let recordID = CKRecordID(recordName: id)
+            let recordID = CKRecord.ID(recordName: id)
             let record = CKRecord(recordType: "OurMemory", recordID: recordID)
             
             record["timeStamp"] = timeStamp as CKRecordValue
@@ -70,7 +70,7 @@ class CloudManager: NSObject {
             let memories = helper.readIDforRemove()
             
             for each in memories {
-                 let recordID = CKRecordID(recordName: each)
+                let recordID = CKRecord.ID(recordName: each)
                 database.fetch(withRecordID: recordID, completionHandler: { (record, error) in
                     if ((error) != nil){
                         print(error?.localizedDescription)
